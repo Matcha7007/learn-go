@@ -2,13 +2,13 @@ package main
 
 import (
 	"fmt"
-	"net/http"
+	foo "net/http"
 )
 
 func main() {
 	fmt.Println("Hello, Go Started Library")
 
-	res, err := http.Get("https://jsonplaceholder.typicode.com/posts/1")
+	res, err := foo.Get("https://jsonplaceholder.typicode.com/posts/1")
 
 	if err != nil {
 		fmt.Println("Error: ", err)
