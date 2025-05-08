@@ -30,7 +30,7 @@ func main() {
 	// 4. Pointers, Slices, Maps, Functions, and Structs: nil
 
 	// ---- Scope
-
+	printName()
 }
 
 func printName() {
