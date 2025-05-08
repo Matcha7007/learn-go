@@ -1,0 +1,58 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	// simple iteration over a range
+	for i := 1; i <= 5; i++ {
+		fmt.Println(i)
+	}
+
+	// iterate over collections
+	numbers := []int {1,2,3,4,5,6}
+
+	for index, value := range numbers {
+		fmt.Printf("Index: %d, Value: %d\n", index, value)
+	}
+
+	// for loop with break continue statement
+	for j := 1; j <= 10; j++ {
+		if j%2 == 0 {
+			continue
+			// it will be continue to next iteration and j will be increase by 1, if j % 2 == 0 or event number
+		}
+
+		// so if j%2 != 0 will be print odd number
+		fmt.Println("Odd Number: ", j)
+
+		if j == 5 {
+			break
+			// and if j value equals 5, the program will be break out of the iteration / loop
+		}
+	}
+
+	// make tree stars with outer and inner loop
+	rows := 5
+
+	// outer loop
+	for k := 1; k <= rows; k++ {
+		// inner loop for print spaces before stars
+		for l := 1; l <= rows - k; l++ {
+			fmt.Print(" ")
+		}
+
+		// inner loop for print stars
+		for m := 1; m <= 2*k-1; m++ {
+			fmt.Print("*")
+		}
+
+		fmt.Println() // move to the next line
+	}
+
+	// in go 1.22 or newer we can use rang over for iterate
+	for i := range 10 {
+		i++
+		fmt.Println(i)
+	}
+}
