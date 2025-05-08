@@ -1,0 +1,19 @@
+package basics
+
+// Untype constant
+// untype constant are constants without a specified type until they are assigned to a value
+const pi = 3.14
+const GRAVITY = 9.81
+
+func main() {
+	// type constant
+	const days int = 7
+
+	// multiple declare
+	const (
+		monday = 1
+		tuesday = 2
+		wednesday = 3
+		thursday int = 4
+	)
+}
