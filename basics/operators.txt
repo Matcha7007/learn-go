@@ -1,0 +1,20 @@
+Logical Operators:
+    ! (logical NOT)
+    || (logical OR) condition 1 || condition 2 || condition 3 just one condition true it will be execute next block code
+    && (logical AND) condition 1 && condition 2 && condition 3 must be true to execute next block code
+
+Bitwise Operators:
+    & (bitwise AND)
+    | (bitwise OR)
+    ^ (bitwise XOR)
+    &^ (bitwise AND NOT)
+    << (left shift)
+    >> (right shift)
+
+Comparison Operators:
+    == (equal)
+    != (not equal)
+    < (less than)
+    <= (less than equal to)
+    > (greater than)
+    >= (greater than to)
