@@ -1,0 +1,86 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// switch case statement in go no need to use break each case, it means automatically break out of the switch
+	// if we want to go to the next case, we can use fallthrough
+	// switch expression {
+	// 		case value1 :
+	// 			code to be executed if expression equals value1
+	//			fallthrough -> the next case will be executed
+	// 		case value2 :
+	// 			code to be executed if expression equals value2
+	// 		case value3 :
+	// 			code to be executed if expression equals value3
+	// 		default :
+	// 			code to be executed if expression does not match any value
+	// }
+
+	fruit := "apple"
+
+	switch fruit {
+	case "apple":
+		fmt.Println("It's an apple")
+	case "banana":
+		fmt.Println("It's a banana")
+	default :
+		fmt.Println("Unknown fruit")
+	}
+
+	// multiple condition
+	day := "Monday"
+
+	switch day {
+	case "Monday", "Tuesday", "Wednesday", "Thursday", "Friday":
+		fmt.Println("It's a weekday")
+	case "Saturday", "Sunday":
+		fmt.Println("It's a weekend")
+	default	:
+		fmt.Println("Invalid day")
+	}
+
+	// expression condition
+	number := 15
+	switch {
+	case number < 10 :
+		fmt.Println("The number is less than 10")
+	case number >= 10 && number < 20 :
+		fmt.Println("The number is between 10 and 19")
+	default :
+		fmt.Println("The number is 20 or greater")
+	}
+
+	// using fallthrough
+	num := 1
+	switch {
+	case num > 1:
+		fmt.Println("The number is greater than 1")
+		fallthrough
+	case num == 2:
+		fmt.Println("The number is 2")
+	default:
+		fmt.Println("The number is not 2")
+	}
+
+	// assertion
+	checkType(1)
+	checkType(3.14)
+	checkType("Hello")
+	checkType(true)
+}
+
+func checkType(x interface{}){
+	switch x.(type) {
+	case int:
+		fmt.Println("It's an integer")
+	case float64:
+		fmt.Println("It's a float")
+	case string:
+		fmt.Println("It's a string")
+	default:
+		fmt.Println("Unknown type")
+	}
+}
